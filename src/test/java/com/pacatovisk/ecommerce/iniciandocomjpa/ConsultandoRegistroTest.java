@@ -1,35 +1,10 @@
 package com.pacatovisk.ecommerce.iniciandocomjpa;
 
 import com.pacatovisk.ecommerce.model.Produto;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityManagerFactory;
-import jakarta.persistence.Persistence;
-import org.junit.*;
+import org.junit.Assert;
+import org.junit.Test;
 
-public class ConsultandoRegistroTest {
-
-    private static EntityManagerFactory entityManagerFactory;
-    private EntityManager entityManager;
-
-    @BeforeClass
-    public static void setUpBeforeClass() {
-        entityManagerFactory = Persistence.createEntityManagerFactory("Ecommerce-PU");
-    }
-
-    @AfterClass
-    public static void tearDownAfterClass() {
-        entityManagerFactory.close();
-    }
-
-    @Before
-    public void setUp() {
-        entityManager = entityManagerFactory.createEntityManager();
-    }
-
-    @After
-    public void tearDown() {
-        entityManager.close();
-    }
+public class ConsultandoRegistroTest extends EntityManagerTest {
 
     @Test
     public void buscarPorIdentificador() {
