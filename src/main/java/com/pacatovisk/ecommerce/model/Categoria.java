@@ -17,7 +17,8 @@ import java.io.Serializable;
 public class Categoria implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq")
+    @SequenceGenerator(name  = "seq", sequenceName = "sequencias_chave_primaria")
     private Integer id;
 
     @Column(name = "nome")
