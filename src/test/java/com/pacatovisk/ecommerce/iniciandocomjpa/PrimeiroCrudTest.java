@@ -1,6 +1,7 @@
 package com.pacatovisk.ecommerce.iniciandocomjpa;
 
 import com.pacatovisk.ecommerce.model.Cliente;
+import com.pacatovisk.ecommerce.model.SexoCliente;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -15,7 +16,7 @@ public class PrimeiroCrudTest extends EntityManagerTest {
 
     @Test
     public void criarCliente() {
-        Cliente cliente = new Cliente(3, "Willian Viana");
+        Cliente cliente = new Cliente(3, "Willian Viana", SexoCliente.MASCULINO);
 
         entityManager.getTransaction().begin();
         entityManager.merge(cliente);
