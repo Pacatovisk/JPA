@@ -1,6 +1,7 @@
-package com.pacatovisk.ecommerce.iniciandocomjpa;
+package com.pacatovisk.ecommerce.mapeamentobasico;
 
 
+import com.pacatovisk.ecommerce.iniciandocomjpa.EntityManagerTest;
 import com.pacatovisk.ecommerce.model.Cliente;
 import com.pacatovisk.ecommerce.model.SexoCliente;
 import org.junit.Assert;

@@ -31,4 +31,7 @@ public class Pedido implements Serializable {
 
     @Column(name = "total")
     private BigDecimal total;
+
+    @Embedded
+    private EnderecoEntregaPedido enderecoEntrega;
 }
