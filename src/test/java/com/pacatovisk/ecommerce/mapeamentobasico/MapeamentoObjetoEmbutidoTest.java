@@ -25,7 +25,7 @@ public class MapeamentoObjetoEmbutidoTest extends EntityManagerTest {
 
         Pedido pedido = new Pedido();
 
-        pedido.setId(10);
+        ///pedido.setId(10); Comentado porque estamos utilizando IDENTITY
         pedido.setDataPedido(LocalDateTime.now());
         pedido.setStatusPedido(StatusPedido.AGUARDADANDO);
         pedido.setTotal(new BigDecimal(1000));
