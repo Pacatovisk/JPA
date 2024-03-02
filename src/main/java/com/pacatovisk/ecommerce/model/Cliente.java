@@ -1,8 +1,6 @@
 package com.pacatovisk.ecommerce.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Objects;
@@ -16,10 +14,13 @@ import java.util.Objects;
 public class Cliente {
 
     @Id
-    @EqualsAndHashCode.Include
     private Integer id;
 
+    @Column(name = "nome")
     private String nome;
+
+    @Enumerated(EnumType.STRING)
+    private SexoCliente sexo;
 
     @Override
     public boolean equals(Object o) {
