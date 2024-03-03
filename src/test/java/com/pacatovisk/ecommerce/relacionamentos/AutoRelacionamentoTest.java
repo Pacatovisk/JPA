@@ -1,12 +1,9 @@
 package com.pacatovisk.ecommerce.relacionamentos;
 
 import com.pacatovisk.ecommerce.iniciandocomjpa.EntityManagerTest;
-import com.pacatovisk.ecommerce.model.*;
+import com.pacatovisk.ecommerce.model.Categoria;
 import org.junit.Assert;
 import org.junit.Test;
-
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
 
 public class AutoRelacionamentoTest extends EntityManagerTest {
 
