@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.Objects;
 
 @Getter
@@ -26,6 +27,9 @@ public class Produto {
     private String descricao;
 
     private BigDecimal preco;
+
+    @OneToMany(mappedBy = "produto")
+    private List<ItemPedido> itemPedidos;
 
     @Override
     public boolean equals(Object o) {

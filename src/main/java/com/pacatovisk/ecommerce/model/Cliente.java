@@ -3,6 +3,7 @@ package com.pacatovisk.ecommerce.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
 import java.util.Objects;
 
 @Getter
@@ -22,6 +23,9 @@ public class Cliente {
 
     @Enumerated(EnumType.STRING)
     private SexoCliente sexo;
+
+    @OneToMany(mappedBy = "cliente")
+    private List<Pedido> pedidos;
 
     @Override
     public boolean equals(Object o) {

@@ -9,6 +9,7 @@ import lombok.Setter;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @NoArgsConstructor@AllArgsConstructor
 @Getter@Setter@Entity@Table(name = "pedido")
@@ -39,4 +40,7 @@ public class Pedido implements Serializable {
 
     @Embedded
     private EnderecoEntregaPedido enderecoEntrega;
+
+    @OneToMany(mappedBy = "pedido")
+    private List<ItemPedido> itemPedidos;
 }
