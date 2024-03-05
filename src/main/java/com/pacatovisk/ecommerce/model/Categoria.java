@@ -32,6 +32,9 @@ public class Categoria implements Serializable {
     @OneToMany(mappedBy = "categoriaPai")
     private List<Categoria> categorias;
 
+    @ManyToMany(mappedBy = "categorias")
+    private List<Produto> produtos;
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
