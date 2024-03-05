@@ -33,7 +33,7 @@ public class Pedido implements Serializable {
     private Integer notaFiscalId;
 
     @Enumerated(EnumType.STRING)
-    private StatusPedido statusPedido;
+    private StatusPedido status;
 
     @Column(name = "total")
     private BigDecimal total;
