@@ -43,4 +43,7 @@ public class Pedido implements Serializable {
 
     @OneToMany(mappedBy = "pedido")
     private List<ItemPedido> itemPedidos;
+
+    @OneToOne(mappedBy = "pedido")
+    private PagamentoCartao pagamento;
 }
