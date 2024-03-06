@@ -1,12 +1,11 @@
 package com.pacatovisk.ecommerce.relacionamentos;
 
 import com.pacatovisk.ecommerce.iniciandocomjpa.EntityManagerTest;
-import com.pacatovisk.ecommerce.model.*;
+import com.pacatovisk.ecommerce.model.PagamentoCartao;
+import com.pacatovisk.ecommerce.model.Pedido;
+import com.pacatovisk.ecommerce.model.StatusPagamento;
 import org.junit.Assert;
 import org.junit.Test;
-
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
 
 public class RelacionamentoOneToOneTest extends EntityManagerTest {
 
