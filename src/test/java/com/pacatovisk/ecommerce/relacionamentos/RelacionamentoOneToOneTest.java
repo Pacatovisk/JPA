@@ -9,7 +9,6 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.time.Instant;
-import java.time.LocalDateTime;
 import java.util.Date;
 
 public class RelacionamentoOneToOneTest extends EntityManagerTest {
