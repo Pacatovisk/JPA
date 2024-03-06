@@ -29,8 +29,8 @@ public class Pedido implements Serializable {
     @Column(name = "data_conclusao")
     private LocalDateTime dataConclusao;
 
-    @Column(name = "nota_fiscal_id")
-    private Integer notaFiscalId;
+    @OneToOne(mappedBy = "pedido")
+    private NotaFiscal notaFiscal;
 
     @Enumerated(EnumType.STRING)
     private StatusPedido status;
