@@ -26,6 +26,17 @@ public class NotaFiscal implements Serializable {
     @JoinColumn(name = "pedido_id")
     private Pedido pedido;
 
+    /**
+     *
+     * Mapeamento possivel com o @JoinTable para o relacionamento um para um
+     *
+     * @OneToOne
+     * @JoinTable(name  = "pedido_nota_fiscal",
+     * joinColumns   = @JoinColumn(name = "nota_fiscal_id", unique = true),
+     *                inverseJoinColumns = @JoinColumn(name = "pedido_id", unique = true))
+     * private Pedido pedido;
+     */
+
     @Column(name = "xml")
     private String xml;
 
