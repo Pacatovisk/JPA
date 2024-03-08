@@ -21,8 +21,9 @@ public class Estoque implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "produto_id")
-    private Integer produtoId;
+    @OneToOne(optional = false)
+    @JoinColumn(name = "produto_id")
+    private Produto produto;
 
     @Column(name = "quantidade")
     private Integer quantidade;

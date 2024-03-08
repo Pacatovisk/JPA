@@ -31,6 +31,9 @@ public class Produto {
     @OneToMany(mappedBy = "produto")
     private List<ItemPedido> itemPedidos;
 
+    @OneToOne(mappedBy = "produto")
+    private Estoque estoque;
+
     @ManyToMany
     @JoinTable(name = "produto_categoria",
             joinColumns = {@JoinColumn(name = "produto_id")},
