@@ -23,7 +23,8 @@ public class FlushTest extends EntityManagerTest {
 
             /*
              *
-             *  A consulta obriga o JPA sincronizar com o pedido que está na mémoria antes de fazer a consulta. O flush é executado antes da consulta JPQL
+             *  Quando uma consulta JPQL é executada, o JPA automaticamente sincroniza o estado dos objetos gerenciados na memória com o banco de dados antes de executar a consulta.
+             *  Isso garante que os resultados da consulta reflitam as alterações mais recentes feitas na transação atual, mesmo sem a chamada explícita do método flush().
              *  Pedido pedidoPago = entityManager.createQuery("select 'p' from Pedido 'p' where p.id = 1", Pedido.class).getSingleResult();
              *  Assert.assertEquals(pedido.getStatus(), pedidoPago.getStatus());
              *
