@@ -15,6 +15,7 @@ import java.util.Objects;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@EntityListeners(GenericoListener.class)
 @Table(name = "produto")
 public class Produto {
 

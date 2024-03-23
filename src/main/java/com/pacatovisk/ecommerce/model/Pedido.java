@@ -11,6 +11,7 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 
+@EntityListeners({ GenericoListener.class, GerarNotaFiscalPedidoListener.class })
 @NoArgsConstructor@AllArgsConstructor
 @Getter@Setter@Entity@Table(name = "pedido")
 public class Pedido implements Serializable {
@@ -49,6 +50,10 @@ public class Pedido implements Serializable {
 
     @OneToOne(mappedBy = "pedido")
     private PagamentoCartao pagamento;
+
+    public boolean isPago() {
+        return StatusPedido.PAGO.equals(status);
+    }
 
     public void calcularTotal() {
         if (itemPedidos != null) {
