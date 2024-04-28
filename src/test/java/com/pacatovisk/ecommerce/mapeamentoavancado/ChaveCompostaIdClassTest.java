@@ -28,7 +28,7 @@ public class ChaveCompostaIdClassTest extends EntityManagerTest {
 
         ItemPedido item = new ItemPedido();
 
-        item.setId(new ItemPedidoId(pedido.getId(), produto.getId()));
+        item.setId(new ItemPedidoId());
         item.setProduto(produto);
         item.setPedido(pedido);
         item.setPrecoProduto(BigDecimal.TEN);
