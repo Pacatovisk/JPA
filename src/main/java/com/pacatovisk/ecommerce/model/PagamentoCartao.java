@@ -1,10 +1,7 @@
 package com.pacatovisk.ecommerce.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.io.Serializable;
 
@@ -17,9 +14,11 @@ import java.io.Serializable;
 public class PagamentoCartao implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @EqualsAndHashCode.Include
+    @Column(name = "pedido_id")
     private Integer id;
 
+    @MapsId
     @OneToOne
     @JoinColumn(name = "pedido_id")
     private Pedido pedido;

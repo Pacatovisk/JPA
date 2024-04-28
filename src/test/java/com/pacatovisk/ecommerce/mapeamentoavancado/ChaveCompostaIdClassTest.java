@@ -22,10 +22,6 @@ public class ChaveCompostaIdClassTest extends EntityManagerTest {
         pedido.setStatus(StatusPedido.AGUARDANDO);
         pedido.setTotal(BigDecimal.TEN);
 
-        entityManager.persist(pedido);
-
-        entityManager.flush();
-
         ItemPedido item = new ItemPedido();
 
         item.setId(new ItemPedidoId());

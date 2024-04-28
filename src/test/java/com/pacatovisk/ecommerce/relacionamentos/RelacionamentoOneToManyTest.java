@@ -24,12 +24,11 @@ public class RelacionamentoOneToManyTest extends EntityManagerTest {
         ItemPedido itemPedido = new ItemPedido();
         itemPedido.setPrecoProduto(BigDecimal.TEN);
         itemPedido.setQuantidade(23);
-        itemPedido.setId(new ItemPedidoId(pedido.getId(), produto.getId()));
+        itemPedido.setId(new ItemPedidoId());
         itemPedido.setPedido(pedido);
         itemPedido.setProduto(produto);
 
         entityManager.getTransaction().begin();
-        entityManager.persist(pedido);
         entityManager.persist(itemPedido);
         entityManager.getTransaction().commit();
         entityManager.clear();
