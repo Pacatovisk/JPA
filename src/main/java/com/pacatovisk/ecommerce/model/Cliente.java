@@ -21,11 +21,32 @@ public class Cliente {
     @Column(name = "nome")
     private String nome;
 
+    @Transient
+    private String primeiroNome;
+
     @Enumerated(EnumType.STRING)
     private SexoCliente sexo;
 
     @OneToMany(mappedBy = "cliente")
     private List<Pedido> pedidos;
+
+    @PostLoad
+    public void configurarPrimeiroNome() {
+        if (this.nome != null && !this.nome.isBlank()) {
+            int index = this.nome.indexOf(" ");
+            //marcelo viana
+
+            //index of = 8
+
+            //index of > -1
+
+            //true
+
+            if (index > -1) {
+                primeiroNome = nome.substring(0, index);
+            }
+        }
+    }
 
     @Override
     public boolean equals(Object o) {
