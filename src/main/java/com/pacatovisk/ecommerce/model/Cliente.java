@@ -34,14 +34,6 @@ public class Cliente {
     public void configurarPrimeiroNome() {
         if (this.nome != null && !this.nome.isBlank()) {
             int index = this.nome.indexOf(" ");
-            //marcelo viana
-
-            //index of = 8
-
-            //index of > -1
-
-            //true
-
             if (index > -1) {
                 primeiroNome = nome.substring(0, index);
             }
